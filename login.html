@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- OwlCarousel2 -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: #f28a0070;">
+    <!-- <style>
+        .formWrap .socialWrap .google .btnWrap {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+}
+.formWrap .socialWrap .google .btnWrap a {
+    width: 100%;
+    float: left;
+    height: 78px;
+    padding: 15px 13px 15px;
+    background-color: #3b5999;
+    border-radius: 2px;
+    border-color: #000;
+}
+        .formWrap .socialWrap .google .btnWrap a .mediaImg {
+    width: 41px;
+    height: 41px;
+    float: left;
+    background: url(images/google.svg) 50% no-repeat;
+    display: inline-block;
+    position: absolute;
+    left: 11px;
+    top: calc((100% - 41px) / 2);
+}
+.formWrap .socialWrap .google .btnWrap a .head {
+    width: auto;
+    float: left;
+    font-family: WF-028154-009464-000021;
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+    font-size: 18px;
+    padding-left: 49px;
+    
+} -->
+
+    </style>
+    <section class="vh-100 mt-0">
+        <div class="container mb-container  h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6 mb-container">
+              <div class="card bg-white text-black">
+                <div class="card-body signinSignup text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <div class="formWrap">
+                        <a class="logo-img text-decoration-none" href="index.html" title="Logo"><img itemprop="logo" src="images/Diwali-Logo-PNG.png" alt="WallMantra" class="lazyautosizes lazyloaded" data-sizes="auto" style="width:30%!important"></a>
+                        <hr>
+                        <div class="headings">
+                        <div class="title" id="login-heading">Login</div>
+                        <div class="titleDetail" id="login-msg">Login to your Isha Profile</div>
+                      </div>
+                     
+                   
+                      <div class="mt-4">
+                        <div class="wrapContain">
+                          <div class="socialWrap">
+                            <div class="google border border-secondary p-2 mt-2 mb-2">
+                              <div class="btnWrap">
+                                <a href="javascript:void(0)" id="withGoogle" onclick="googleActionHandler();" class="text-decoration-none text-dark">
+                                  <div class="mediaImg"></div>
+                                  <div class="head row"><span class="col-2 col-md-4 col-lg-4"><img src="images/google.svg" alt="" class="float-end"></span> <span class="col-10 col-md-8 col-lg-8"><span class="float-start">Continue with Google</span></span></div>
+                                </a>
+                               
+                              </div>
+                            </div>
+                            <div class="facbookWrap border border-secondary p-2 mt-2 mb-2" style="background-color: #3b5999;">
+                              <div class="btnWrap">
+                                <a href="javascript:void(0)" id="withFB" onclick="facebookActionHandler();" class="text-decoration-none text-white">
+                                  <div class="mediaImg"></div>
+                                  <div class="head row"><span class="col-2 col-md-4 col-lg-4"><img src="images/facebook.svg" alt="" class="float-end"></span><span class="col-10 col-md-8 col-lg-8"><span class="float-start">Continue with Facebook</span></span> </div>
+                                </a>
+                                
+                              </div>
+                            </div>
+                            <div class="apple border border-secondary bg-dark p-2 mt-2 mb-2">
+                              <div class="btnWrap">
+                                <a href="javascript:void(0)" id="withApple" onclick="appleActionHandler();" class="text-decoration-none text-white">
+                                  <div class="mediaImg"></div>
+                                  <div class="head row"><span class="col-2 col-md-4 col-lg-4"><img src="images/apple.svg" alt="" class="float-end"></span> <span class="col-10 col-md-8 col-lg-8"><span class="float-start">Continue with Apple</span></span> </div>
+                                </a>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ******** including the email/password login provider ********* -->
+                      <div>
+                        <div class="wrapContain">
+                          <div class="emailWrap">
+                            <div class="email border border-secondary p-2 mt-2 mb-2">
+                              <div class="btnWrap">
+                                <a href="javascript:void(0)" id="withEmail" onclick="renderEmailLoginPrompt(0);" class="text-decoration-none text-dark">
+                                  <div class="mediaImg emailPhoneIcon"></div>
+                                  <div class="head row"><span class="col-2 col-md-4 col-lg-4"><img src="images/email.avif" width="30px" alt="" class="float-end"></span><span class="col-10 col-md-8 col-lg-8"><span class="float-start">Login with Email ID</span></span> </div>
+                                </a>
+                               
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ******** including the phone login provider ********* -->
+                      <div>
+                        <div class="wrapContain">
+                          <div class="phoneWrap">
+                            <div class="phoneNumber border border-secondary p-2 mt-2 mb-2">
+                              <div class="btnWrap">
+                                <a href="javascript:void(0)" id="withPhone" onclick="renderPhonePrompt(0);" class="text-decoration-none text-dark">
+                                  <div class="mediaImg emailPhoneIcon"></div>
+                                  <div class="head row"><span class="col-2 col-md-4 col-lg-4"><img src="images/mobile.avif" width="30px" alt="" class="float-end"></span><span class="col-10 col-md-8 col-lg-8"><span class="float-start">Login with Mobile</span></span> </div>
+                                </a>
+                              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ******** including footers ********* -->
+                  <div>
+                    <div class="bottomWrap existuser-section">
+                      <div class="topWrap">Don't have an account?</div>
+                      <a href="javascript:void(0)" onclick="renderMainPage(1)" class="text-decoration-none text-dark">Sign Up</a>
+                      <a href="" target="_blank" class="text-decoration-none text-dark">Terms of Service</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>    
