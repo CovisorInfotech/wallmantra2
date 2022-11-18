@@ -2580,6 +2580,18 @@ img{width: 100%;}
   .product-pdp-stick .product-pdp-stick-menu-wrap .active {
       border-color: #edaa39;
   }
+
+
+  .list .active{
+    color: white !important;
+    border-bottom: 2px solid white!important;
+}  
+.list a:hover{background-color: #ff9d00;    color: white !important;
+    padding: 15px 9px 0px 9px!important;}
+
+    @media only screen and (min-width: 768px){
+        .list a{ padding: 15px 9px 0px 9px!important;}
+    }
   </style>
   
 
@@ -2587,17 +2599,17 @@ img{width: 100%;}
   <div class="product-pdp-stick-wrap">
       <div class="product-pdp-stick sticky-enable">
           <div class="scroll-top"><img src="https://staticinm2.ishalife.com/in/pub/static/version1665834240/frontend/OM/Isha/en_US/IshaLife_ProductPage/images/sticky-arrow.svg" style="width:50%!important;"><span>Top</span></div>
-          <div class="product-pdp-stick-menu-wrap">
-                                                  <a href="#" class="section-sticky feature">Home</a>
-                                                                  <a href="product-details.html#use" class="hide section-sticky bloom_extract">Services</a>
+          <div class="product-pdp-stick-menu-wrap list">
+                                                  <a href="#" class="section-sticky feature active">Home</a>
+                                                                  <a href="product-details.html#use" class="hide section-sticky bloom_extract menuitem">Services</a>
                                                                   <!-- <a class="hide section-sticky how_to_care">How to care</a> -->
-                                                                  <a href="#" class="section-sticky what_is_in active">Products</a>
-                                                                  <a href="product-details.html#details" class="section-sticky reviews">About Us</a>
+                                                                  <a href="#" class="section-sticky what_is_in menuitem">Products</a>
+                                                                  <a href="product-details.html#details" class="section-sticky reviews menuitem">About Us</a>
                                                                   <!-- <a href="product-details.html#details" class="section-sticky reviews">Catalog</a>
                                                                   <a href="product-details.html#details" class="section-sticky reviews">Pricing</a>
                                                                    -->
-                                                                  <a href="product-details.html#faq" class="section-sticky reviews">FAQ</a>
-                                                                  <a href="product-details.html#reviews" class="section-sticky reviews">Reviews</a>
+                                                                  <a href="product-details.html#faq" class="section-sticky reviews menuitem">FAQ</a>
+                                                                  <a href="product-details.html#reviews" class="section-sticky reviews menuitem">Reviews</a>
                                       </div>
       </div>
   </div>
@@ -4093,6 +4105,16 @@ mySidebar.style.display = "none";
     }
 })
 </script>
+
+
+<script>
+$(".list a.menuitem").click(function(){
+  $(this).siblings(".active").removeClass("active");
+  $(this).addClass("active");
+});
+  
+</script>
+
 
 <!-- <script>
     window.onscroll = function() {myFunction()};
