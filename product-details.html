@@ -3118,9 +3118,12 @@ img{width: 100%;}
 
 
 <style>
-    #details h4{font-size: 15px;}
-    #details p{    font-size: 13px;
-    text-align: justify;}
+    @media only screen and (max-width: 600px) {
+        #details h4{font-size: 15px;}
+    #details p{    font-size: 13px;}
+}
+ 
+    #details p{text-align: justify;}
 </style>
   <section id="details" class="pt-4 pb-4" style="">
     <div class="container">
@@ -3135,7 +3138,7 @@ img{width: 100%;}
             </p>
        </div>
        </div>
-       
+
        <hr>
        <div class="row p-2">
         <div class="col-7 col-md-9 col-lg-9 m-auto">
