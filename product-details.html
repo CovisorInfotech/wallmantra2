@@ -30,9 +30,9 @@ h2{color: #ffc107;}
 .how-use-row{background-color: white;}
 
         .head-phone{
-            position: fixed;
+            /* position: fixed; */
     width: 100%;
-    margin-top: 27px;
+    /* margin-top: 27px; */
     z-index: 200;
 background-color: #000000;
 }
@@ -153,9 +153,9 @@ ul{    color: rgb(0, 0, 0);}
     z-index: 3;
     background: none;
     width: 100%;
-    top: 140px;
+    /* top: 140px; */
     left: 0;
-    /* padding: 10px; */
+    margin-top: 12px;
     display: none;
         }
         @keyframes navigation_animation {
@@ -375,7 +375,7 @@ img{width: 100%;}
 	}
 
     .phone-pc {
-    position: fixed;
+    /* position: fixed; */
     background-color: #232323cc;
     top: 0;
     left: 0;
@@ -386,7 +386,7 @@ img{width: 100%;}
     z-index: 4;
     height: 100%;
     width: 100%;
-    margin-top: 78px;
+    /* margin-top: 78px; */
     z-index: 300;
     /* animation: animateleft 0.4s; */
     transform: scale(1);
@@ -447,14 +447,15 @@ img{width: 100%;}
 
     @media only screen and (min-width: 600px) {
     
-        header{
-           background-color: #ffffff;
-        padding-top: 20px;
+        .header{background-color: #ffffff!important;padding-top: 2px;}
+        .header.fixed{
+           background-color: #ffffff!important;
         position: fixed;
         z-index: 200;
         width: 100%;
-        
+        top: 0px;
         }
+       
     
         .div-color{    background-color: #000000;margin-bottom: -13px;}
         .m_desktopUL .desktopMenuItem .desktop-head{color: white!important;}
@@ -466,38 +467,54 @@ img{width: 100%;}
     
     <body class="bg-dark">
         <!-- d-flex flex-row -->
-        <header>
-            <style>
-                #extra .item{font-size: 13px;    padding: 2px;
+        <style>
+            #extra .item{font-size: 13px;    padding: 2px;
 }
-               #extra .owl-nav, .owl-dots{display: none;}
-               .card-coun{position: absolute;
-        background-color: #ffc71f;
-        width: 25px;
-        height: 24px;
-        text-align: center;
-        border-radius: 50%;
-        color: white;
-        margin: -10px 0px 0px -9px;} 
-    
-    @media only screen and (min-width: 600px)
-    {
-    .extra-off{border-bottom: 1px solid white;padding-bottom: 4px;background-color: #000000;margin-top: -20px;padding-top: 1px;}    
-    }
-    @media only screen and (max-width: 600px) 
-    {
-    .extra-off{border-bottom: 1px solid white;padding-bottom: 4px;background-color: #000000;position: fixed; z-index: 200; width: 100%;   margin-top: 0px;} 
-    }
-    
-            </style>
-            <div class="extra-off">
-                <div id="extra" class="owl-carousel text-center">
-                <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
-                <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
-                <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
-                <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
-                </div>
+           #extra .owl-nav, .owl-dots{display: none;}
+           .card-coun{position: absolute;
+    background-color: #ffc71f;
+    width: 25px;
+    height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    margin: -10px 0px 0px -9px;} 
+
+@media only screen and (min-width: 600px)
+{
+
+.extra-off{border-bottom: 1px solid white;padding-bottom: 4px;background-color: #000000;margin-top: -20px;padding-top: 1px;}    
+}
+@media only screen and (max-width: 600px) 
+{
+    .header.fixed{
+           background-color: #000000!important;
+        position: fixed;
+        z-index: 200;
+        width: 100%;
+        top: 0px;
+        }
+.extra-off{
+    border-bottom: 1px solid white;padding-bottom: 4px;
+    background-color: #000000;
+    /* position: fixed;  */
+    z-index: 200;
+     width: 100%;   
+     margin-top: 0px;
+    } 
+}
+
+        </style>
+        <div class="extra-off m-0">
+            <div id="extra" class="owl-carousel text-center">
+            <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
+            <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
+            <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
+            <div class="item"><a href="/collections/all" class="text-warning">Extra 10% OFF, use code PREPAID10 at checkout</a></div>
             </div>
+        </div>
+        <header class="header">
+
             <div class="container-sm">
                 <div class="pc-header d-none d-sm-none d-md-block d-lg-block">
                 <!-- <div class="row mb-2 mt-4">
@@ -706,7 +723,7 @@ img{width: 100%;}
               </style>
     
                 <div class="div-color">
-                <div class="container-sm">
+                <div class="">
                 
                 <!-- <div class="phone-pc">
                     <div class="container-fluid open-menu"> -->
@@ -1929,7 +1946,7 @@ img{width: 100%;}
     position: sticky;
     top: 151px;
 }
-#product-de{padding-top: 176px;}
+#product-de{padding-top: 20px;}
 }
 
 .nav-link {padding: 4px!important;}
@@ -1992,7 +2009,7 @@ img{width: 100%;}
 
                                 <style>
 
- #owl-carousel-nr{padding-top: 80px;}                                   
+ /* #owl-carousel-nr{padding-top: 80px;}                                    */
 #owl-carousel-nr .owl-nav{margin-top: -49px;
     position: sticky;
     padding: 13px;}
@@ -2393,7 +2410,7 @@ img{width: 100%;}
 
 <section class="mt-4 mb-4">
     <div class="container">
-        <div class="pt-4 pb-4" style="background: linear-gradient(to top left, #ffd692 0%, #f7f6f4 100%);"">
+        <div class="p-4" style="background: linear-gradient(to top left, #ffd692 0%, #f7f6f4 100%);"">
             <table class="table table-borderless">
                 <thead>
                   <tr>
@@ -2509,7 +2526,7 @@ img{width: 100%;}
     .product-pdp-stick-wrap {
       /* height: 60px; */
       width: 100%;
-      top: 140px!important;
+      top: 113px!important;
       position: sticky;
     z-index: 100;
   }
@@ -2650,7 +2667,7 @@ img{width: 100%;}
   @media only screen and (max-width: 768px){
   .product-pdp-stick-wrap {
       width: 100%;
-      top: 80px!important;
+      top: 53px!important;
       position: sticky;
     z-index: 100;
   }
@@ -4509,6 +4526,16 @@ $(".list a.menuitem").click(function(){
         }
       }
     });
+ </script>
+
+ <script>
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 120) {
+          $('.header').addClass('fixed');
+      } else {
+          $('.header').removeClass('fixed');
+      }
+});
  </script>
 
 
